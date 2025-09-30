@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Authentication System</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 50px 30px;
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        font-weight: 300;
+      }
+
+      .header p {
+        opacity: 0.9;
+        font-size: 1.1rem;
+      }
+
+      .content {
+        padding: 50px 30px;
+      }
+
+      .content h2 {
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .content p {
+        color: #666;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 10px;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+      }
+
+      .btn:active {
+        transform: translateY(0);
+      }
+
+      .btn.secondary {
+        background: white;
+        color: #667eea;
+        border: 2px solid #667eea;
+      }
+
+      .btn.secondary:hover {
+        background: #667eea;
+        color: white;
+      }
+
+      .features {
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px solid #e1e5e9;
+      }
+
+      .features h3 {
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .feature-list {
+        list-style: none;
+        text-align: left;
+      }
+
+      .feature-list li {
+        color: #666;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .feature-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #27ae60;
+        font-weight: bold;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          margin: 10px;
+          border-radius: 15px;
+        }
+
+        .header {
+          padding: 40px 20px;
+        }
+
+        .content {
+          padding: 40px 20px;
+        }
+
+        .btn {
+          display: block;
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Welcome</h1>
+        <p>Secure User Authentication System</p>
+      </div>
+
+      <div class="content">
+        <h2>Get Started</h2>
+        <p>
+          Create your account or sign in to access your dashboard and manage
+          your profile.
+        </p>
+
+        <a href="/signup" class="btn">Create Account</a>
+        <a href="/login" class="btn secondary">Sign In</a>
+
+        <div class="features">
+          <h3>Features</h3>
+          <ul class="feature-list">
+            <li>Secure JWT authentication</li>
+            <li>Password encryption</li>
+            <li>Cookie-based sessions</li>
+            <li>User profile management</li>
+            <li>Responsive design</li>
+            <li>Real-time validation</li>
+            <li>Server-side rendering with EJS</li>
+            <li>MVP architecture pattern</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
