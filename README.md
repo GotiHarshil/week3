@@ -1,2 +1,1 @@
-# week3
-In class website development
+This is a README file for Lab3.
