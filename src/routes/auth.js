@@ -16,7 +16,7 @@ function cookieOptions(isRefresh = false) {
         path: '/',                      // be consistent for set/clear
     };
     if (process.env.COOKIE_DOMAIN) base.domain = process.env.COOKIE_DOMAIN;
-    if (!isRefresh) base.maxAge = 15 * 60 * 1000;         // 15 minutes
+    if (!isRefresh) base.maxAge = 15 * 60 * 1000;         // 15 minutes it will take
     else base.maxAge = 7 * 24 * 60 * 60 * 1000;           // 7 days
     return base;
 }
