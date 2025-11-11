@@ -38,4 +38,12 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => console.log(`Server running on :${PORT}`));
+// Only start the server when this file is run directly.
+// This prevents the app from starting a listener during tests (which would keep
+// Jest from exiting due to open handles). Tests should require the app and
+// let the test runner handle starting/stopping if needed.
+if (require.main === module) {
+    app.listen(PORT, () => console.log(`Server running on :${PORT}`));
+}
+
+module.exports = app;
