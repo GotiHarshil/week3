@@ -35,7 +35,7 @@ describe('Authentication - Logout', () => {
         const res = await request(app)
             .post('/api/auth/logout');
 
-        // right now your backend returns 200, so test for that
+        // right now your backend returns 200, so testing will be done accordingly
         expect(res.statusCode).toBe(200);
         expect(res.body).toHaveProperty('success');
     });
